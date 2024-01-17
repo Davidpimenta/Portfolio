@@ -1,0 +1,551 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+
+a, h1 , p{
+    color: var(--cor5);
+}
+
+:root{
+    --cor1: #1A1A1A;
+    --cor2: #333333;
+    --cor3: #262626;
+    --cor4: #fc6d5d;
+    --cor5: #F3F3F3; 
+    --font: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--cor2);
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+
+/**Header**/
+
+header{
+    width: 100%;
+    background-color: var(--cor1);
+    position: fixed;
+    padding: 15px;
+    z-index: 99999999;
+}
+
+header > nav{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.Nome-logo{
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#bug{
+    color: var(--cor4);
+}
+
+menu{
+    height: 100%;
+
+}
+
+menu > ul{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 25px;
+}
+
+menu > ul > li > a{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+menu > ul > li{
+    position: relative;
+    transition: all 0.2s;
+}
+
+
+li{
+    list-style: none;
+}
+
+nav > div{
+    display: flex;
+}
+
+.menu-hover-a{
+    position: absolute;
+    top: 150%;
+    right: 100%;
+    transform: translate(100%, -100%);
+    width: 0px;
+    height: 5px;
+    background-image: linear-gradient(to right, #fc6d5d, #1A1A1A);
+    transition: all 0.5s;
+}
+
+.menu-hover-a-active{
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to right, #fc6d5d, #1A1A1A);
+    transition: all 0.5s;
+}
+
+/**Header**/
+
+/**Main**/
+
+main{
+    padding-top: 70px;
+    margin: auto;
+    width: 85%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#conteiner-content{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+    justify-content: center;
+    height: calc(100vh - 80px);
+}
+
+.content-arrow{
+    position: absolute;
+    top: 100%;
+    transform: translate(0%, -100%);
+}
+
+.content-arrow > i{
+    color: var(--cor5);
+    font-size: 70px;
+    animation: arrow 0.3s steps(60) 1;
+}
+
+@keyframes arrow {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes arrowrevers {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }   
+}
+
+
+.container{
+    display: flex;
+    width: 780px;
+    justify-content: start;
+    align-items: center;
+}
+
+.container .estatico{
+    color: #ffff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.container .dinamico{
+    margin-left: 15px;
+    line-height: 90px;
+    padding-right: 40px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.dinamico li{
+    color: #fc6d5d;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    left: 0;
+    position: relative;
+    top: 0;
+    animation: slide 1s steps(1) 1;
+    animation-delay: 4.5s;
+}
+
+
+.typing{
+    display: inline-block;
+    content: "";
+    z-index: 9;
+    position: absolute!important;
+    width: 1000px;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid #fc6d5d;
+    animation: typing 1.5s steps(30) 1;
+    animation-fill-mode: forwards;
+    background: #333333;
+}
+
+.dinamico li span{
+    position: relative;
+}
+
+#textoanimado{
+    display: inline-block;
+}
+
+
+
+@keyframes slide {
+
+    100%{
+        top: -360px;
+    }
+}
+
+
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+@keyframes typingrevers {
+    100%{
+        left: 0%;
+        margin: 0 35px 0 -35px;
+    } 
+}
+
+
+@keyframes piscando {
+    0%{
+        border-left-color: transparent;
+    }
+
+    10%{
+        border-left-color: #fc6d5d;
+    }
+
+    20%{
+        border-left-color: transparent;
+    }
+
+    30%{
+        border-left-color: #fc6d5d;
+    }
+
+    40%{
+        border-left-color: transparent;
+    }
+
+    50%{
+        border-left-color: #fc6d5d;
+    }
+
+    60%{
+        border-left-color: transparent;
+    }
+
+    70%{
+        border-left-color: #fc6d5d;
+    }
+
+    80%{
+        border-left-color: transparent;
+    }
+        
+    90%{
+        border-left-color: #fc6d5d;
+    }
+    100%{
+        border-left-color: transparent;
+    }
+}
+
+/**Sobre**/
+
+#sobre{
+    width: 100%;
+}
+
+.conteiner-sobre{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.conteiner-text-sobre{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-titulo-sobre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon{
+    font-size: 24px;
+    color: var(--cor5);
+}
+
+
+#sobre-titulo{
+    margin-bottom: 15px;
+}
+
+#sobre-descrição{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.paragrafo{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#atualmente{
+    font-size: 15px;
+    color: darkgray;
+    font-weight: 700;
+}
+
+.conteiner-foto-sobre{
+    cursor: pointer;
+    position: relative;
+}
+
+.contorno-foto2{
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20px, -20px);
+    border-radius: 15px;
+    border: 2px solid var(--cor4);
+    animation-fill-mode: forwards;
+}
+
+#foto{
+    z-index: 9;
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    animation-fill-mode: forwards;
+}
+
+#foto-2{
+    border-radius: 15px;
+    width: 250px;
+    height: 250px;
+}
+
+@keyframes trocafotoa{
+    0%{
+        transform: translate( -20px, -20px);
+    }
+
+    50%{
+        transform: translate(-20px, 180px);
+    }
+
+    100%{
+        z-index: 99;
+        transform: translate(0px, 0px);
+        border: 2px solid transparent;
+    }
+
+}
+
+
+@keyframes trocafotob{
+    0%{
+        border: 2px solid transparent;
+        z-index: 99;
+        transform: translate(0px, 0px);
+    }
+
+    50%{
+        transform: translate(-20px, -80px);
+    }
+
+    100%{
+        z-index: 0;
+        transform: translate(-20px, -20px);
+        border: 2px solid var(--cor4);
+    }
+
+}
+
+/**Sobre**/
+
+/**Estudos**/
+
+#estudos{
+    width: 100%;
+    border: 2px solid var(--cor5);
+    border-radius: 15px;
+    margin-block: 50px;
+    padding: 50px;
+}
+.conteiner-all-estudos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.titulo-conteiner-estudos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.conteiner-slider-all{
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.conteiner-cards{
+    width: 400px;
+    overflow: hidden;
+}
+
+.arrow{
+    font-size: 60px;
+    color: var(--cor5);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.arrow:hover{
+    color: var(--cor4);
+    transition: all 0.2s;
+}
+
+
+.slider{
+    width: 2700px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.cards{
+    display: flex;
+    border: 2px solid var(--cor4);
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    gap: 20px;
+    width: 400px;
+    height: 200px;
+    transition: 1s all;
+}
+
+.cards-img{
+    width: 400px;
+    height: 198px;
+    border-radius: 15px;
+}
+
+#html{
+    width: 100px;
+    border-radius: 15px;
+}
+
+#css{
+    width: 73px;
+    border-radius: 15px;
+}
+
+#htmlcsscard{
+    background-image: linear-gradient(to right, #F16524, #214CE5);
+}
+
+#javascript{
+    width: 100px;
+    height: 100px;
+}
+
+#javascriptcard{
+    background-image: linear-gradient(to right, #F7DD3D, black);
+}
+
+#php{
+    width: 150px;
+    height: 150px;
+}
+
+#phpcard{
+    background-image: linear-gradient(to right, #777BB3, #000000);
+}
+
+#sqlcard{
+    background-image: linear-gradient(to right, #0079D6, black);
+}
+
+#jquery{
+    width: 150px;
+    height: 150px;
+}
+
+#jquerycard{
+    background-image: linear-gradient(to right, #172C45, black);
+}
+
+
+
+
+/**Estudos**/
+
+
+/**Main**/
+
