@@ -127,8 +127,9 @@ menuopt.forEach((item) => {
 
 
         let scrollanimado = setInterval(() => {
-
+            
             if(scrollPositionB < to){
+                console.log(scrollPositionA)
                 if(scrollPositionA == to || scrollPositionA > to){
                     clearInterval(scrollanimado)
                 }
@@ -164,15 +165,15 @@ menuopt.forEach((item) => {
             span[0].classList = 'menu-hover-a menu-hover-a-active'
         }
 
-        if(item.getAttribute('href') == '#estudos'){
+        if(item.getAttribute('href') == '#projetos'){
             span[1].classList = 'menu-hover-a menu-hover-a-active'
         }
 
-        if(item.getAttribute('href') == '#certificados'){
+        if(item.getAttribute('href') == '#estudos'){
             span[2].classList = 'menu-hover-a menu-hover-a-active'
         }
 
-        if(item.getAttribute('href') == '#projetos'){
+        if(item.getAttribute('href') == '#certificados'){
             span[3].classList = 'menu-hover-a menu-hover-a-active'
         }
         if(item.getAttribute('href') == '#skills'){
@@ -187,15 +188,15 @@ menuopt.forEach((item) => {
             span[0].classList = 'menu-hover-a'
         }
 
-        if(item.getAttribute('href') == '#estudos'){
+        if(item.getAttribute('href') == '#projetos'){
             span[1].classList = 'menu-hover-a'
         }
 
-        if(item.getAttribute('href') == '#certificados'){
+        if(item.getAttribute('href') == '#estudos'){
             span[2].classList = 'menu-hover-a'
         }
 
-        if(item.getAttribute('href') == '#projetos'){
+        if(item.getAttribute('href') == '#certificados'){
             span[3].classList = 'menu-hover-a'
         }
         if(item.getAttribute('href') == '#skills'){
