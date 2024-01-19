@@ -338,17 +338,6 @@ main{
     -webkit-text-fill-color: transparent;
 }
 
-/**#sobre-titulo::before{
-    display: inline-block;
-    position: absolute;
-    left: 120%;
-    top: 50%;
-    transform: translate(0%, -50%);
-    content: '';
-    width: 100px;
-    height: 5px;
-    background-color: red;
-}*/
 
 #sobre-descrição{
     text-align: justify;
@@ -454,24 +443,252 @@ main{
 
 .conteiner-skills{
     margin: auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 25px;
-    gap: 25px;
 }
 
 .skills{
     display: flex;
+    flex-direction: column ;
+    width: calc(50% - 20px);
+    padding: 20px;
+    height: auto;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.259);
+    background-color: var(--cor1);
+    transition: all 0.4s;
+}
+
+.skills:hover{
+    border: 2px solid var(--cor5);
+}
+
+.conteiner-titulo-skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.conteiner-number{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
-    border: 2px solid #fc6d5d;
-    border-radius: 15px;
-    box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.42);
+    width: 70px;
+    height: 70px;
+    background-color: var(--cor2);
+    border: 2px solid var(--cor4);
+    border-radius: 50%;
 }
+
+
+.number-top{
+    font-size: 50px;
+    color: var(--cor5);
+}
+
+.traço-meio-skill{
+    position: relative;
+    width: 50%;
+    height: 8px;
+    background-color: transparent;
+}
+
+.conteiner-coranimada{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.coranimada{
+    display: inline-block;
+    width: 100%;
+    height: 8px;
+}
+
+.cor1{
+    z-index: 99;
+    animation: coranimada 5s steps(1000) infinite;
+}
+
+.cor2{
+    position: absolute;
+    top: -100%;
+    transform: translate(0%, 100%);
+}
+
+@keyframes coranimada {
+    0%{
+        transform: translate(-100%, 0px);
+    }
+    
+    100%{
+        transform: translate(200%, 0px);
+    }
+}
+
+
+
+.traço-meio-skill::before{
+    content: '';
+    position: absolute;
+    z-index: 999;
+    left: 100%;
+    top: 0%;
+    transform: translate(-50%, -35%);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 8px solid;
+    background-color: var(--cor5);
+}
+
+.traço-meio-skill::after{
+    content: '';
+    position: absolute;
+    z-index: 999;
+    right: 100%;
+    top: 0%;
+    transform: translate(50%, -35%);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 8px solid;
+    background-color: var(--cor5);
+}
+
+
+
+.titulo-skill{
+    font-size: 30px;
+    color: #E54C21;
+    text-transform: uppercase;
+}
+
+.conteiner-text-skills{
+    width: 100%;
+}
+
+.paragrafo-skill{
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+/*HTML*/
+
+#htmlspan{
+    background-image: linear-gradient(to right,#90280b, #E54C21);
+}
+
+
+#htmltraço::after{
+    border-color:#90280b;
+}
+
+#htmltraço::before{
+    border-color: #E54C21;
+}
+
+/*HTML*/
+
+
+/*CSS*/
+
+
+#cssspan{
+    background-image: linear-gradient(to right,#0f2b8f, #214CE5);
+}
+
+#csstitle{
+    color: #214CE5;
+}
+
+#csstraço::after{
+
+    border-color:#0f2b8f;
+}
+
+#csstraço::before{
+    border-color: #214CE5;
+}
+
+
+
+/*CSS*/
+
+
+/*JAVASCRIPT*/
+
+
+
+#javascriptspan{
+    background-image: linear-gradient(to right,#87791f, #F7DD3D);
+}
+
+#javascripttitle{
+    color: #F7DD3D;
+}
+
+#javascripttraço::after{
+
+    border-color:#87791f;
+}
+
+#javascripttraço::before{
+    border-color: #c2ae30;
+}
+
+
+
+/*JAVASCRIPT*/
+
+/*JQUERY*/
+
+#jqueryspan{
+    background-image: linear-gradient(to right,#172C45 ,#3a6caa);
+}
+
+#jquerytitle{
+    color: #3a6caa;
+}
+
+#jquerytraço{
+    width: 40%!important;
+}
+
+#jquerytraço::after{
+
+    border-color:#172C45;
+}
+
+#jquerytraço::before{
+    border-color: #3a6caa;
+}
+
+/*JQUERY*/
+
+
+
+
+
+
+
 
 /**Estudos**/
 
@@ -549,52 +766,6 @@ main{
     height: 198px;
     border-radius: 15px;
 }
-
-#html{
-    width: 100px;
-    border-radius: 15px;
-}
-
-#css{
-    width: 73px;
-    border-radius: 15px;
-}
-
-#htmlcsscard{
-    background-image: linear-gradient(to right, #F16524, #214CE5);
-}
-
-#javascript{
-    width: 100px;
-    height: 100px;
-}
-
-#javascriptcard{
-    background-image: linear-gradient(to right, #F7DD3D, black);
-}
-
-#php{
-    width: 150px;
-    height: 150px;
-}
-
-#phpcard{
-    background-image: linear-gradient(to right, #777BB3, #000000);
-}
-
-#sqlcard{
-    background-image: linear-gradient(to right, #0079D6, black);
-}
-
-#jquery{
-    width: 150px;
-    height: 150px;
-}
-
-#jquerycard{
-    background-image: linear-gradient(to right, #172C45, black);
-}
-
 
 
 

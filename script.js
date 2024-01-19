@@ -165,11 +165,11 @@ menuopt.forEach((item) => {
             span[0].classList = 'menu-hover-a menu-hover-a-active'
         }
 
-        if(item.getAttribute('href') == '#projetos'){
+        if(item.getAttribute('href') == '#estudos'){
             span[1].classList = 'menu-hover-a menu-hover-a-active'
         }
 
-        if(item.getAttribute('href') == '#estudos'){
+        if(item.getAttribute('href') == '#projetos'){
             span[2].classList = 'menu-hover-a menu-hover-a-active'
         }
 
@@ -188,11 +188,11 @@ menuopt.forEach((item) => {
             span[0].classList = 'menu-hover-a'
         }
 
-        if(item.getAttribute('href') == '#projetos'){
+        if(item.getAttribute('href') == '#estudos'){
             span[1].classList = 'menu-hover-a'
         }
 
-        if(item.getAttribute('href') == '#estudos'){
+        if(item.getAttribute('href') == '#projetos'){
             span[2].classList = 'menu-hover-a'
         }
 
@@ -251,3 +251,4 @@ arrowright.addEventListener('click', () => {
 
 
 //Estudos-Carrocel
+
