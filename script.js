@@ -1,11 +1,121 @@
 //Animação de carregamento
 
-//Entrada do site animação
+const options = {
+    root: null,
+    threshold: 0.5,
+}
+  
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        if(entry.target.id == 'sobre'){
+            setTimeout(() => {
+                animaçãoTituloSobre()
+                observer.unobserve(tituloSobre)
+            }, 500) 
 
-//Entrada do site animação
+            animaçãonaSectionSobre()
+            
+            setTimeout(() => {
+                animaçãonoTextoSobre()
+            }, 500)
+            
+            setTimeout(() => {
+                animaçãoFotoSobre()
+                observer.unobserve(fotoSobre)
+            }, 2500)
 
+            setTimeout(() => {
+                animaçãoAtualmenteSobre()
+                observer.unobserve(atualmenteSobre)
+            }, 3000)
+
+            observer.unobserve(sectionSobre)
+        }
+
+    }
+    
+})
+}, options)
+
+const sectionSobre = document.getElementById('sobre')
+observer.observe(sectionSobre)
 
 //Animação de carregamento
+
+//Entrada do site animação
+
+
+
+
+
+//Entrada do site animação
+
+//Animação Foto sobre
+const fotoSobre = document.getElementById('foto')
+function animaçãoFotoSobre(){
+    const contorno = document.getElementById('contorno-foto2')
+    fotoSobre.style.animation = 'animaçãoFoto 1s 1s forwards'
+    contorno.style.animation = 'animaçãoContorno 1s forwards'
+}
+//Animação Foto sobre
+
+//Animação Section sobre
+function animaçãonaSectionSobre(){
+    sectionSobre.style.animation = 'CarregamentoSection 2s forwards'
+}
+//Animação Section sobre
+
+//Animação Titulo Sobre
+const tituloSobre = document.getElementById('sobre-titulo')
+function animaçãoTituloSobre(){
+    tituloSobre.style.opacity = '1'
+    let letras = tituloSobre.textContent.split(''); 
+    tituloSobre.textContent = ''; 
+    letras.forEach((letra, index) => {
+        let span = document.createElement('span');
+        span.textContent = letra; 
+        span.classList.add('tituloLetra');
+        span.style.animationDelay = `${index * 0.1}s`; 
+        tituloSobre.appendChild(span);
+        if(letra == 'e'){
+            let espaco = document.createElement('span');
+            espaco.textContent = ' ';
+            tituloSobre.append(espaco) 
+        } 
+    }) 
+}
+//Animação Titulo Sobre
+//Animação no texto sobre
+const texto = document.getElementById('sobre-descrição')
+function animaçãonoTextoSobre(){
+    texto.style.opacity = '1';
+    const palavras = texto.textContent.split(' ');
+    texto.textContent = '';
+    var contletras = 0.1
+
+    palavras.forEach((Palavra) => {
+        const palavraInteira = document.createElement('span')
+        palavraInteira.classList.add('palavra')
+        palavraInteira.textContent = ' '
+        for (const L of Palavra) {
+            const letra = document.createElement('span')
+            letra.textContent = L
+            letra.classList.add('letra')
+            letra.style.animationDelay = `${contletras}s`
+            palavraInteira.appendChild(letra)
+            contletras += 0.004 
+        }
+        texto.appendChild(palavraInteira) 
+    });   
+}
+//Animação no texto sobre
+//Animação AtualmenteSobre
+const atualmenteSobre = document.getElementById('atualmente')
+function animaçãoAtualmenteSobre(){
+    atualmenteSobre.style.animation = 'animaçãoatualmente 1s forwards'
+}
+//Animação AtualmenteSobre
 
 //Animação typing
 
@@ -81,7 +191,6 @@ menuopt.forEach((item) => {
         let scrollanimado = setInterval(() => {
             
             if(scrollPositionB < to){
-                console.log(scrollPositionA)
                 if(scrollPositionA == to || scrollPositionA > to){
                     clearInterval(scrollanimado)
                 }
