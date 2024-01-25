@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   
     <script src="https://kit.fontawesome.com/0dad49e0d6.js" crossorigin="anonymous"></script>
+    
     <title>Portfólio David pimenta</title>
 </head>
 <body>
@@ -23,39 +25,44 @@
             </div>            
             <menu>
                 <ul>
-                    <li>
+                    <li class="opt">
                         <a href="#sobre" id="a" class="menu-opt">
                             Sobre
-                            <span class="menu-hover-a"></span>
                         </a>
+                        <div class="opt-desativada"></div>
                     </li>
-                    <li>
+                    <li class="opt">
                         <a href="#estudos" class="menu-opt">
                             Estudos
                         </a>
-                            <span class="menu-hover-a"></span>
+                        <div class="opt-desativada"></div>
                         </li>
-                    <li>
+                    <li class="opt"> 
                         <a href="#projetos" class="menu-opt">
                             Projetos</a>
-                            <span class="menu-hover-a"></span>
+                            <div class="opt-desativada"></div>
                         </li>
-                    <li>
+                    <li class="opt">
                         <a href="#certificados" class="menu-opt">
                             Certificados</a>
-                            <span class="menu-hover-a"></span>
+                            <div class="opt-desativada"></div>
                         </li>
-                    <li>
+                    <li class="opt">
                         <a href="#skills" class="menu-opt">
                             Skills
-                            <span class="menu-hover-a"></span>
+                            <div class="opt-desativada"></div>
                         </a>
                     </li>
                 </ul>
+                <div class="bottom-marcker">
+
+                </div>
             </menu>
         </nav>
     </header>
 
+    <div class="count-particles"></div>
+    <div id="particles-js" class="particles-all"></div>
     <main>
         <section id="conteiner-content">
             <div class="container">
@@ -131,7 +138,91 @@
             </div>
         </section>    
 
-        <section id="projetos">
+        <section id="projetos" class="sections">
+            <div class="conteiner-all-projetos">
+                <div class="conteiner-titulo-projetos">
+                    <h1 class="titulo-projeto">Meus Projetos</h1>
+                </div>
+                <div class="conteiner-conteudo-projetos">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="links">
+                                <a href="https://github.com/Davidpimenta/Space-tourism" target="_blank" rel="external"><img src="img/github-142-svgrepo-com.svg" alt="github" class="icon-link"></a>
+                                <a href="https://davidpimenta.github.io/Space-tourism/" target="_blank" rel="external"><img src="img/site-svgrepo-com.svg" alt="link" class="icon-link"></a>
+                            </div>
+                            <div class="conteudo-site">
+                                <img src="img/background-destination-desktop.jpg" class="bg-site" alt="bg-site">
+                                <img src="img/image-moon.webp" class="ft-site" alt="ft-site">
+                                <div class="titulo-site">
+                                    <h2>Space</h2>
+                                </div>
+                            </div>
+                            <div class="tecnologias">
+                                <img src="img/html-1.svg" alt="" class="tec">
+                                <img src="img/css-3.svg" alt="" class="tec">
+                                <img src="img/logo-javascript.svg" alt="" class="tec js">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="links">
+                                <a href="https://github.com/Davidpimenta/Snap" target="_blank" rel="external"><img src="img/github-142-svgrepo-com.svg" alt="github" class="icon-link"></a>
+                                <a href="https://davidpimenta.github.io/Snap/" target="_blank" rel="external"><img src="img/site-svgrepo-com.svg" alt="link" class="icon-link"></a>
+                            </div>
+                            <div class="conteudo-site">
+                                <div class="div-bg"></div>
+                                <img src="img/image-hero-mobile.png" class="ft-site snap" alt="ft-site">
+                                <div class="titulo-site">
+                                    <h2>Snap</h2>
+                                </div>
+                            </div>
+                            <div class="tecnologias">
+                                <img src="img/html-1.svg" alt="" class="tec">
+                                <img src="img/css-3.svg" alt="" class="tec">
+                                <img src="img/logo-javascript.svg" alt="" class="tec js">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="links">
+                                <img src="img/github-142-svgrepo-com.svg" alt="github" class="icon-link">
+                                <img src="img/site-svgrepo-com.svg" alt="link" class="icon-link">
+                            </div>
+                            <div class="conteudo-site">
+                                <div class="div-bg bg-desenvolvimento"></div>
+                                <img src="img/rectangle-code-svgrepo-com.svg" class="ft-site" alt="ft-site">
+                                <div class="titulo-site">
+                                    <h2 class="site-em-desenvolvimento">Em Desenvolvimento</h2>
+                                </div>
+                            </div>
+                            <div class="tecnologias">
+                                <img src="img/html-1.svg" alt="" class="tec">
+                                <img src="img/sass-1.svg" alt="" class="tec sass">
+                                <img src="img/jquery-4.svg" alt="" class="tec js">
+                                <img src="img/php-1.svg" alt="" class="tec php">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="links">
+                                <img src="img/github-142-svgrepo-com.svg" alt="github" class="icon-link">
+                                <img src="img/site-svgrepo-com.svg" alt="link" class="icon-link">
+                            </div>
+                            <div class="conteudo-site">
+                                <div class="div-bg bg-desenvolvimento"></div>
+                                <img src="img/rectangle-code-svgrepo-com.svg" class="ft-site" alt="ft-site">
+                                <div class="titulo-site">
+                                    <h2 class="site-em-desenvolvimento">Em Desenvolvimento</h2>
+                                </div>
+                            </div>
+                            <div class="tecnologias">
+                                <img src="img/html-1.svg" alt="" class="tec">
+                                <img src="img/sass-1.svg" alt="" class="tec sass">
+                                <img src="img/jquery-4.svg" alt="" class="tec js">
+                                <img src="img/php-1.svg" alt="" class="tec php">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     
     
@@ -143,9 +234,6 @@
 
 
 
-
-
-
         <section id="skills">
             <h1>Skills</h1>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cupiditate quia quo, iste facere quidem ipsum recusandae accusamus possimus est exercitationem. Minus quas magni atque aliquam id voluptates a molestiae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam in, quaerat iste quod consequatur accusamus quasi amet rem inventore enim omnis laudantium harum et suscipit culpa, deserunt quae itaque ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque autem repudiandae deserunt beatae recusandae sunt esse omnis placeat tempora voluptatem laborum culpa non, distinctio exercitationem! Magnam atque incidunt repudiandae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores qui fugiat quas quo sit dolorem facere sunt voluptates officiis obcaecati ut ullam voluptatem, quasi fuga quos, dolor laudantium ex minus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod asperiores commodi hic ratione quis ipsa harum deleniti nemo in nesciunt, eligendi vero, minima atque culpa nostrum dolorum. Laudantium, ratione adipisci.
@@ -153,9 +241,32 @@
         
     </main>
     <footer>
-        Vagando pelo caminho da programação
+        Vagando pelo caminho da programação - Mono Pantheon
     </footer>
-    <script src="script.js"></script>
+
+
+    <script src="Scripts/Particula/particles.js"></script>
+    <script src="Scripts/Particula/app.js"></script>
+    <script src="Scripts/Particula/lib/stats.js"></script>
+    <script type="module" src="Scripts/script.js">
+         var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function() {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
 </body>
 </html>
 
