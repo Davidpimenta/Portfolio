@@ -8,7 +8,7 @@ const optionsE = {
     threshold: 0.8,
 }
 
-
+var verificaskillsanimation = false
 var skills = document.querySelectorAll('.skills');
 
 const observerEstudos = new IntersectionObserver((entries) => {
