@@ -8,15 +8,15 @@ const optionsC = {
     threshold: 0.8,
 }
 
-const observerCertificados = new IntersectionObserver((entries) => {
+const observerAfazeres = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
           
-            observerCertificados.unobserve(sectionCertificados)
+            observerAfazeres.unobserve(sectionAfazeres)
         } 
     })
 }, options)
-const observerCertificadosOpt = new IntersectionObserver((entries) => {
+const sectionAfazeresOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
@@ -33,6 +33,6 @@ const observerCertificadosOpt = new IntersectionObserver((entries) => {
 
 //ObserverCertificados
 
-const sectionCertificados = document.getElementById('certificados')
-observerCertificados.observe(sectionCertificados)
-observerCertificadosOpt.observe(sectionCertificados)
+const sectionAfazeres = document.getElementById('Afazeres')
+observerAfazeres.observe(sectionAfazeres)
+sectionAfazeresOpt.observe(sectionAfazeres)

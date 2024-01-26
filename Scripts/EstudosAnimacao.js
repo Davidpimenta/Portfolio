@@ -69,7 +69,7 @@ function animaçãoTituloEstudos(){
         span.classList.add('tituloLetra');
         span.style.animationDelay = `${index * 0.1}s`; 
         tituloEstudos.appendChild(span);
-        if(letra == 'u'){
+        if(letra == 's'){
             let espaco = document.createElement('span');
             espaco.textContent = ' ';
             tituloEstudos.append(espaco) 

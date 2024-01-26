@@ -8,7 +8,6 @@ const optionsP = {
 }
 
 
-
 const observerProjetos = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -71,9 +70,8 @@ function animationTituloProjeto(){
 //AnimationCardsProjetos
 
 
-
+const cards = document.querySelectorAll('.card')
 function animationCardsProjeto(){
-    const cards = document.querySelectorAll('.card')
     let cont = 0.7
     cards.forEach((card, indice) => {
         card.style.animation = `puff-in-center 1.5s  ${cont * indice}s forwards`
@@ -85,7 +83,6 @@ function animationCardsProjeto(){
 //AnimationTecProjetos
 function animacaoTecProjetos(){
    
-        const cards = document.querySelectorAll('.card')
         let contadorTec = 0
         for(let card of cards){
             const tecs = card.querySelectorAll('.tec')
@@ -99,7 +96,6 @@ function animacaoTecProjetos(){
 //AnimationTecProjetos
 
 //AnimationTextoProjetos
-
 function animacaoTextosProjetos(){
     setTimeout(() => {
         const textoProject = document.querySelector('.texto-projetos')
@@ -108,7 +104,7 @@ function animacaoTextosProjetos(){
         textoProject.textContent = '';
         var contletras = 1
         
-        console.log(textoProject)
+
         palavras.forEach((Palavra) => {
             const palavraInteira = document.createElement('span')
             palavraInteira.classList.add('palavra')
@@ -120,12 +116,25 @@ function animacaoTextosProjetos(){
                 letra.style.animationDelay = `${contletras}s`
                 palavraInteira.appendChild(letra)
                 contletras += 0.1 
-                console.log(palavraInteira)
+
             }
             textoProject.appendChild(palavraInteira)
         });
     
     },1500)  
 }
-
 //AnimationTextoProjetos
+
+//AnimationDescProjeto
+
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+        let divTec = card.querySelector('.tecnologias')
+        let divContent = card.querySelector('.conteudo-site')
+        divTec.classList.toggle('tecnologias-atv')
+        divContent.classList.toggle('conteudo-site-dst')
+    })
+})
+
+
+//AnimationDescProjeto
