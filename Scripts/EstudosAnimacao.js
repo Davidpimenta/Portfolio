@@ -1,3 +1,7 @@
+import * as animacaoProjetos from '/Scripts/ProjetosAnimacao.js'
+
+
+
 const optionsEs = {
     root: null,
     threshold: 0.4,

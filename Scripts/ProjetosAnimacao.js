@@ -1,3 +1,8 @@
+import * as animacaoAfazeres from '/Scripts/AfazeresAnimacao.js'
+
+
+
+
 const optionsPr = {
     root: null,
     threshold: 0.4,

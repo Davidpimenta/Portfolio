@@ -1,3 +1,6 @@
+import * as animacaoSkills from '/Scripts/SkillsAnimacao.js'
+
+
 const optionsAf = {
     root: null,
     threshold: 0.3,

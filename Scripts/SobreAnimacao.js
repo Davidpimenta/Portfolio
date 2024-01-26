@@ -1,3 +1,7 @@
+import * as animacaoEstudos from '/Scripts/EstudosAnimacao.js'
+
+
+
 const optionsSo = {
     root: null,
     threshold: 1,

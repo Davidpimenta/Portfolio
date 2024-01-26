@@ -1,3 +1,6 @@
+
+import * as animacaoSkills from '/Scripts/EntradaAnimacao.js'
+
 const optionsSk = {
     root: null,
     threshold: 0.3,

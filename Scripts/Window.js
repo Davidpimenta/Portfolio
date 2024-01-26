@@ -1,3 +1,7 @@
+import * as animacaoSobre from '/Scripts/SobreAnimacao.js'
+
+
+
 //Animação Scroll
 const menuopt = document.querySelectorAll('.menu-opt')
 menuopt.forEach((item) => {
