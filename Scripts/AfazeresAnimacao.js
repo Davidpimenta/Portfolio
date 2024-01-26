@@ -1,4 +1,4 @@
-const options = {
+const optionsAf = {
     root: null,
     threshold: 0.3,
 }
@@ -15,7 +15,7 @@ const observerAfazeres = new IntersectionObserver((entries) => {
             observerAfazeres.unobserve(sectionAfazeres)
         } 
     })
-}, options)
+}, optionsAf)
 const sectionAfazeresOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

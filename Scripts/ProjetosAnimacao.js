@@ -1,4 +1,4 @@
-const options = {
+const optionsPr = {
     root: null,
     threshold: 0.4,
 }
@@ -21,7 +21,7 @@ const observerProjetos = new IntersectionObserver((entries) => {
             observerProjetos.unobserve(sectionProjetos)
         } 
     })
-}, options)
+}, optionsPr)
 
 
 const observerProjetosOpt = new IntersectionObserver((entries) => {

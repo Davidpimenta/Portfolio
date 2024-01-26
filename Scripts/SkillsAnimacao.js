@@ -1,4 +1,4 @@
-const options = {
+const optionsSk = {
     root: null,
     threshold: 0.3,
 }
@@ -17,7 +17,7 @@ const observerSkills = new IntersectionObserver((entries) => {
             observerSkills.unobserve(sectionSkills)
         }
     })
-}, options)
+}, optionsSk)
 const observerSkillsOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

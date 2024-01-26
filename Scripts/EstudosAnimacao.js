@@ -1,4 +1,4 @@
-const options = {
+const optionsEs = {
     root: null,
     threshold: 0.4,
 }
@@ -8,7 +8,7 @@ const optionsE = {
     threshold: 0.8,
 }
 
-var verificaskillsanimation = false
+
 var skills = document.querySelectorAll('.skills');
 
 const observerEstudos = new IntersectionObserver((entries) => {
@@ -24,7 +24,7 @@ const observerEstudos = new IntersectionObserver((entries) => {
             observerEstudos.unobserve(sectionEstudos)
         } 
     })
-}, options)
+}, optionsEs)
 const observerEstudosOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

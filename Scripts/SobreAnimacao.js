@@ -1,8 +1,8 @@
-const optionsS = {
+const optionsSo = {
     root: null,
     threshold: 1,
 } 
-const options = {
+const optionsobre = {
     root: null,
     threshold: 0.4,
 }
@@ -24,7 +24,7 @@ const observerSobre = new IntersectionObserver((entries) => {
             observerSobre.unobserve(sectionSobre)
         }
     })
-}, options)
+}, optionsobre)
 
 const observerSobreOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -36,7 +36,7 @@ const observerSobreOpt = new IntersectionObserver((entries) => {
             optsmarcadores[0].classList.remove('opt-ativada')
         }
     })
-}, optionsS)
+}, optionsSo)
 
 const sectionSobre = document.getElementById('sobre')
 observerSobre.observe(sectionSobre)
