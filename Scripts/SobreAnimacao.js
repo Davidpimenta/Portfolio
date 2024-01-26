@@ -4,7 +4,7 @@ const optionsS = {
 } 
 const options = {
     root: null,
-    threshold: 0.8,
+    threshold: 0.4,
 }
 
 const observerSobre = new IntersectionObserver((entries) => {

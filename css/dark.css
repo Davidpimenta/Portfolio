@@ -564,7 +564,7 @@ main{
    opacity: 0;
    position: relative;
     border-right: 4px solid #0079D6;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 
@@ -834,7 +834,7 @@ strong.bootstrap{
     position: relative;
     width: 100%;
     border-right: 4px solid var(--cor4);
-    padding-bottom:100px;
+    padding-bottom:80px;
 }
 
 .conteiner-titulo-projetos{
@@ -875,6 +875,7 @@ strong.bootstrap{
     border-radius: 15px;
     box-shadow: 0px 0px 20px 3px var(--cor1);
     overflow: hidden;
+    cursor: pointer;
     opacity: 0;
 }
 
@@ -932,6 +933,10 @@ strong.bootstrap{
     width: 35px;
 }
 
+.bt{
+    width: 32px;
+}
+
 .bg-site{
     position: absolute;
     top: 0%;
@@ -984,6 +989,32 @@ strong.bootstrap{
     background-color: var(--cor3);
 
 }
+
+.conteiner-texto-projetos{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.texto-projetos{
+    opacity: 0;
+    font-size: 20px;
+}
+
+
+.letraTextoProjeto {
+    background: linear-gradient(180deg, #0091ff, #0079D6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transform: translate(0%, -100%);
+    opacity: 0;
+    animation: appearUp 0.5s forwards;
+}
+
+
+
 
 @keyframes animaçãotec {
     100%{

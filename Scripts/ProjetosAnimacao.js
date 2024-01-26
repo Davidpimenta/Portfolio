@@ -1,6 +1,6 @@
 const options = {
     root: null,
-    threshold: 0.3,
+    threshold: 0.4,
 }
 const optionsP = {
     root: null,
@@ -16,6 +16,8 @@ const observerProjetos = new IntersectionObserver((entries) => {
             animationTituloProjeto()
             setTimeout(() =>{
                 animationCardsProjeto()
+                animacaoTecProjetos()
+                animacaoTextosProjetos()
             }, 1000) 
             observerProjetos.unobserve(sectionProjetos)
         } 
@@ -68,26 +70,62 @@ function animationTituloProjeto(){
 
 //AnimationCardsProjetos
 
+
+
 function animationCardsProjeto(){
     const cards = document.querySelectorAll('.card')
-    console.log(cards)
     let cont = 0.7
     cards.forEach((card, indice) => {
         card.style.animation = `puff-in-center 1.5s  ${cont * indice}s forwards`
-        const tec = card.querySelectorAll('.tec')
-        let conta = 1
-        console.log(tec)
-        tec.forEach((t) => {
-            t.style.animation = `roll-in-left 1.5s  ${conta * indice}s forwards`
-        })
-        
     })
 }
-
 
 //AnimationCardsProjetos
 
 //AnimationTecProjetos
-
-
+function animacaoTecProjetos(){
+   
+        const cards = document.querySelectorAll('.card')
+        let contadorTec = 0
+        for(let card of cards){
+            const tecs = card.querySelectorAll('.tec')
+            for(let tec of tecs){
+                tec.style.animation = `roll-in-left 1.5s  ${contadorTec}s forwards`
+                contadorTec += 0.45
+            }
+        }
+  
+}
 //AnimationTecProjetos
+
+//AnimationTextoProjetos
+
+function animacaoTextosProjetos(){
+    setTimeout(() => {
+        const textoProject = document.querySelector('.texto-projetos')
+        textoProject.style.opacity = '1'
+        const palavras = textoProject.textContent.split(' ');
+        textoProject.textContent = '';
+        var contletras = 1
+        
+        console.log(textoProject)
+        palavras.forEach((Palavra) => {
+            const palavraInteira = document.createElement('span')
+            palavraInteira.classList.add('palavra')
+            palavraInteira.textContent = ' '
+            for (const L of Palavra) {
+                const letra = document.createElement('span')
+                letra.textContent = L
+                letra.classList.add('letraTextoProjeto')
+                letra.style.animationDelay = `${contletras}s`
+                palavraInteira.appendChild(letra)
+                contletras += 0.1 
+                console.log(palavraInteira)
+            }
+            textoProject.appendChild(palavraInteira)
+        });
+    
+    },1500)  
+}
+
+//AnimationTextoProjetos
