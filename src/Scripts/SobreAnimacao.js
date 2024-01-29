@@ -1,15 +1,12 @@
-import * as animacaoEstudos from '/Scripts/EstudosAnimacao.js'
-
-
+const options = {
+    root: null,
+    threshold: 0.4,
+}
 
 const optionsSo = {
     root: null,
     threshold: 1,
 } 
-const optionsobre = {
-    root: null,
-    threshold: 0.4,
-}
 
 const observerSobre = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -28,7 +25,7 @@ const observerSobre = new IntersectionObserver((entries) => {
             observerSobre.unobserve(sectionSobre)
         }
     })
-}, optionsobre)
+}, options)
 
 const observerSobreOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

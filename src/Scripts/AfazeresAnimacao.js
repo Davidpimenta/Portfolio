@@ -1,9 +1,6 @@
-import * as animacaoSkills from '/Scripts/SkillsAnimacao.js'
-
-
-const optionsAf = {
+const options = {
     root: null,
-    threshold: 0.3,
+    threshold: 0.4,
 }
 
 const optionsC = {
@@ -18,7 +15,8 @@ const observerAfazeres = new IntersectionObserver((entries) => {
             observerAfazeres.unobserve(sectionAfazeres)
         } 
     })
-}, optionsAf)
+}, options)
+
 const sectionAfazeresOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

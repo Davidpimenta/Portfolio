@@ -1,8 +1,4 @@
-import * as animacaoProjetos from '/Scripts/ProjetosAnimacao.js'
-
-
-
-const optionsEs = {
+const options = {
     root: null,
     threshold: 0.4,
 }
@@ -28,7 +24,7 @@ const observerEstudos = new IntersectionObserver((entries) => {
             observerEstudos.unobserve(sectionEstudos)
         } 
     })
-}, optionsEs)
+}, options)
 const observerEstudosOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

@@ -1,16 +1,14 @@
-
-import * as animacaoSkills from '/Scripts/EntradaAnimacao.js'
-
-const optionsSk = {
+const options = {
     root: null,
-    threshold: 0.3,
+    threshold: 0.4,
 }
+
 const optionsS = {
     root: null,
     threshold: 0.8,
 }
 
-var verificaSobreAnimacao = true
+
 
 //ObserverSkills
 const observerSkills = new IntersectionObserver((entries) => {
@@ -20,7 +18,7 @@ const observerSkills = new IntersectionObserver((entries) => {
             observerSkills.unobserve(sectionSkills)
         }
     })
-}, optionsSk)
+}, options)
 const observerSkillsOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

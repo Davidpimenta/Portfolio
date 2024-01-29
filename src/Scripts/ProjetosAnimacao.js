@@ -1,12 +1,8 @@
-import * as animacaoAfazeres from '/Scripts/AfazeresAnimacao.js'
-
-
-
-
-const optionsPr = {
+const options = {
     root: null,
     threshold: 0.4,
 }
+
 const optionsP = {
     root: null,
     threshold: 0.8,
@@ -26,7 +22,7 @@ const observerProjetos = new IntersectionObserver((entries) => {
             observerProjetos.unobserve(sectionProjetos)
         } 
     })
-}, optionsPr)
+}, options)
 
 
 const observerProjetosOpt = new IntersectionObserver((entries) => {
@@ -86,17 +82,39 @@ function animationCardsProjeto(){
 //AnimationCardsProjetos
 
 //AnimationTecProjetos
-function animacaoTecProjetos(){
-   
+function animacaoTecProjetos(Num=0, Array){
         let contadorTec = 0
+        let guardatemp = []
         for(let card of cards){
             const tecs = card.querySelectorAll('.tec')
-            for(let tec of tecs){
-                tec.style.animation = `roll-in-left 1.5s  ${contadorTec}s forwards`
-                contadorTec += 0.45
+            let contadorArray = 0
+
+            if(Num == 0){
+                for(let tec of tecs){
+                    tec.style.animation = `roll-in-left 1.5s  ${contadorTec}s forwards`
+                    if(guardatemp.length < 5 ){
+                        guardatemp.push(contadorTec)
+                    }
+                    contadorTec += 0.45
+                }
+            }
+
+            if(Num == 1){
+                guardatemp = [...Array]
+                for(let tec of tecs){
+                    setTimeout(() => {
+                        console.log(guardatemp)
+                        tecs[contadorArray].style.animation = `roll-in-left 1.5s  ${guardatemp[contadorArray]}s forwards`
+                        contadorArray++
+                    }, 8000)
+                    
+                }
             }
         }
-  
+
+        if(Num == 0){
+            animacaoTecProjetos(1, guardatemp)
+        }       
 }
 //AnimationTecProjetos
 
@@ -132,14 +150,33 @@ function animacaoTextosProjetos(){
 
 //AnimationDescProjeto
 
-cards.forEach((card) => {
-    card.addEventListener('click', () => {
-        let divTec = card.querySelector('.tecnologias')
-        let divContent = card.querySelector('.conteudo-site')
-        divTec.classList.toggle('tecnologias-atv')
-        divContent.classList.toggle('conteudo-site-dst')
+let verificalink = true
+const a = document.querySelectorAll('.links a')
+console.log(a)
+a.forEach((link)=> {
+    link.addEventListener('click', () => {
+        verificalink = false
+        console.log(link)
     })
 })
 
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+        if(verificalink){
+            let divTec = card.querySelector('.tecnologias')
+            let divContent = card.querySelector('.conteudo-site')
+            divTec.classList.toggle('tecnologias-atv')
+            divContent.classList.toggle('conteudo-site-dst')
+
+            let tecs = card.querySelectorAll('.tec')
+            tecs.forEach((tec) => {
+                tec.classList.toggle('tec-desativada')
+            })
+
+        } else {
+            verificalink = true
+        }
+    })
+})
 
 //AnimationDescProjeto
