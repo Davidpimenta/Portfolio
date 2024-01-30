@@ -8,21 +8,23 @@ const optionsSo = {
     threshold: 1,
 } 
 
+
+
 const observerSobre = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
+        
             animaçãoTituloSobre()
             animaçãonaSectionSobre()
-            animaçãonoTextoSobre()        
-
+            animaçãonoTextoSobre()
             setTimeout(() => {
                 animaçãoFotoSobre()
             }, 1500)
-
             setTimeout(() => {
                 animaçãoAtualmenteSobre()
             }, 1400)        
             observerSobre.unobserve(sectionSobre)
+            
         }
     })
 }, options)
@@ -45,10 +47,11 @@ observerSobreOpt.observe(sectionSobre)
 
 //Animação Foto sobre
 const fotoSobre = document.getElementById('foto')
+const bgfoto = document.querySelector('.conteiner-foto-sobre')
 function animaçãoFotoSobre(){
-    const contorno = document.getElementById('contorno-foto2')
-    fotoSobre.style.animation = 'animaçãoFoto 1s 1s forwards'
-    contorno.style.animation = 'animaçãoContorno 1s forwards'
+
+    bgfoto.style.animation = 'animaçãoFoto 1s 1s forwards'
+    fotoSobre.style.animation = 'animaçãoFoto 1s 2s forwards'
 }
 //Animação Foto sobre
 //Animação Section sobre

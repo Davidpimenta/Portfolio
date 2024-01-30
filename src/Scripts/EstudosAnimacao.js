@@ -1,6 +1,7 @@
+
 const options = {
     root: null,
-    threshold: 0.4,
+    threshold: 0.5,
 }
 
 const optionsE = {
@@ -22,6 +23,7 @@ const observerEstudos = new IntersectionObserver((entries) => {
                 verificaskillsanimation = true  
             }, 2000) 
             observerEstudos.unobserve(sectionEstudos)
+        
         } 
     })
 }, options)

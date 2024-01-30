@@ -1,3 +1,5 @@
+
+
 const options = {
     root: null,
     threshold: 0.4,
@@ -12,7 +14,6 @@ const optionsP = {
 const observerProjetos = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-
             animationTituloProjeto()
             setTimeout(() =>{
                 animationCardsProjeto()

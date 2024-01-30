@@ -17,7 +17,7 @@ menuopt.forEach((item) => {
                 if(scrollPositionA == to || scrollPositionA > to){
                     clearInterval(scrollanimado)
                 }
-                scrollPositionA+= 10
+                scrollPositionA+= 8
                 window.scroll(scrollPositionB, scrollPositionA)
             
             } else if(scrollPositionB > to){

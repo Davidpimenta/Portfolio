@@ -1,3 +1,4 @@
+
 const options = {
     root: null,
     threshold: 0.4,
@@ -14,7 +15,7 @@ const optionsS = {
 const observerSkills = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-
+    
             observerSkills.unobserve(sectionSkills)
         }
     })

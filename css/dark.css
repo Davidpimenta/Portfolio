@@ -17,7 +17,7 @@ a, h1 , p{
     top: 0%;
     width: 100vw;
     height: 100vh;
-    z-index: 9999;
+    z-index: 29;
 }
 
 
@@ -54,8 +54,8 @@ header{
     width: 100%;
     background-color: var(--cor1);
     position: fixed;
-    padding: 15px;
-    z-index: 99999999;
+    padding: 10px;
+    z-index: 9999999;
 }
 
 header > nav{
@@ -408,8 +408,8 @@ main{
 
 .conteiner-sobre{
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 30% 70%;
     gap: 30px;
 }
 
@@ -503,19 +503,18 @@ main{
 
 
 .conteiner-foto-sobre{
-    position: relative;
-}
-
-.contorno-foto2{
-    position: absolute;
     opacity: 0;
-    z-index: 0;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    border: 2px solid var(--cor4);
-    animation-fill-mode: forwards;
+    position: relative;
+    background-color: var(--cor4);
+    width: 240px;
+    height: 240px;
+    display: flex;
+    margin-left: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--cor1);
 }
 
 #foto{
@@ -523,7 +522,6 @@ main{
     z-index: 9;
     position: relative;
     height: 300px;
-    border-radius: 15px;
     animation-fill-mode: forwards;
     box-shadow: 0px 0px 5px 4px #0079d659;
 }
@@ -558,6 +556,7 @@ main{
    position: relative;
     border-right: 4px solid #0079D6;
     padding-bottom: 30px;
+    animation-play-state: paused;
 }
 
 
@@ -662,9 +661,10 @@ strong.bootstrap{
     justify-content: center;
     align-items: center;
     width: 120px;
-    height: auto;
+    height: 108px;
     padding: 1px;
-    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.389);
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.46);
+    background-color: var(--cor3);
     border-radius: 15px;
     transition: all 0.4s;
     cursor: pointer;
@@ -679,7 +679,7 @@ strong.bootstrap{
     height: 100%;
     padding: 20px;
     z-index: 9;
-    background-color: var(--cor2);
+    background-color:  var(--cor3);
     border-radius: 15px;
 }
 
@@ -827,7 +827,8 @@ strong.bootstrap{
     position: relative;
     width: 100%;
     border-right: 4px solid var(--cor4);
-    padding-bottom:80px;
+    padding-bottom: 30px;
+    animation-play-state: paused;
 }
 
 .conteiner-titulo-projetos{
@@ -856,6 +857,10 @@ strong.bootstrap{
     width: 100%;
     padding-block: 20px;
     gap: 30px;
+}
+
+#verificaAnimacao{
+    animation-play-state: paused;
 }
 
 .card{
@@ -1175,13 +1180,14 @@ strong.bootstrap{
 
 /**Certificados**/
 
-#Afazeres{
+#afazeres{
     position: relative;
     padding-bottom: 70px!important;
     border-right: 4px solid var(--cor4);   
+    animation-play-state: paused;
 }
 
-#Afazeres::before{
+#afazeres::before{
     z-index: 9;
     position: absolute;
     left: 100%;
@@ -1217,7 +1223,7 @@ strong.bootstrap{
 
 .conteiner-conteudo-afazeres{
     position: relative;
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -1226,20 +1232,48 @@ strong.bootstrap{
     gap: 25px;
 }
 
-.afarezes-conteudo{
+.conteiner-afazer-lados{
     position: relative;
-    width: calc(50% - 25px);
-    height: 200px;
-    padding: 20px;
-    background-color: var(--cor1);
-    border-radius: 15px;
-    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.189);
-    color: var(--cor5);
-    border: 4px solid var(--cor4);
+    width: 100%;
+    display: flex;
 }
 
-.afarezes-conteudo:nth-child(-n+2){
-    margin-bottom: 15px;
+.conteiner-direito-afazer{
+    justify-content: end;
+} 
+
+.afarezes-conteudo{
+    width: 45%;
+    padding: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.163);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.163);
+    background-color: red;
+}
+
+.bolinha-top{
+    position: absolute;
+    display: block;
+    top: 100%;
+    background-color: var(--cor4);
+    z-index: 9;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 1s all;
+}
+
+.trilha{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    background-color: var(--cor4);
+    width: 5px;
+    height: 0px;
+    transition:  0.2s all;
 }
 
 .header-afazer{
@@ -1251,9 +1285,7 @@ strong.bootstrap{
 }
 
 .conteiner-link{
-    position: absolute;
-    left: calc(50% - 20px);
-    top: calc(100% - 40px);
+   
 }
 
 .link-afazer{
@@ -1302,6 +1334,7 @@ hr{
     padding-top: 0px;
     position: relative;
     border-right: 4px solid #0079D6;
+    animation-play-state: paused;
 }
 
 #sobre::before{
@@ -1356,6 +1389,11 @@ hr{
     background-color: var(--cor5);
 }
 
+/**Skills**/
+#skills{
+    animation-play-state: paused;
+}
 /**Sections**/
+
 
 /**Main**/
