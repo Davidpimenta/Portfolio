@@ -6,7 +6,7 @@ menuopt.forEach((item) => {
         var id = item.getAttribute('href')
         id = id.replace('#', '')
         const section = document.getElementById(id)
-        let to = section.offsetTop - 150
+        let to = section.offsetTop - 100
         
         let scrollPositionA = window.scrollY;
         let scrollPositionB = scrollPositionA
