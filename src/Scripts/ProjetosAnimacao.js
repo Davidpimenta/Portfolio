@@ -103,7 +103,6 @@ function animacaoTecProjetos(Num=0, Array){
                 guardatemp = [...Array]
                 for(let tec of tecs){
                     setTimeout(() => {
-                        console.log(guardatemp)
                         tecs[contadorArray].style.animation = `roll-in-left 1.5s  ${guardatemp[contadorArray]}s forwards`
                         contadorArray++
                     }, 8000)
@@ -152,26 +151,47 @@ function animacaoTextosProjetos(){
 
 let verificalink = true
 const a = document.querySelectorAll('.links a')
-console.log(a)
+
 a.forEach((link)=> {
     link.addEventListener('click', () => {
         verificalink = false
-        console.log(link)
     })
 })
 
+
+let verificaDescAtivada = true
 cards.forEach((card) => {
     card.addEventListener('click', () => {
         if(verificalink){
-            let divTec = card.querySelector('.tecnologias')
-            let divContent = card.querySelector('.conteudo-site')
-            divTec.classList.toggle('tecnologias-atv')
-            divContent.classList.toggle('conteudo-site-dst')
+            if(verificaDescAtivada){
+                let divTec = card.querySelector('.tecnologias')
+                let divContent = card.querySelector('.conteudo-site')
+                divTec.classList.toggle('tecnologias-atv')
+                divContent.classList.toggle('conteudo-site-dst')
 
-            let tecs = card.querySelectorAll('.tec')
-            tecs.forEach((tec) => {
-                tec.classList.toggle('tec-desativada')
-            })
+                let cardDesc = divTec.querySelector('.descricao-tec')
+                cardDesc.classList.toggle('descricao-tecatv')
+
+                let tecs = card.querySelectorAll('.tec')
+                tecs.forEach((tec) => {
+                    tec.classList.toggle('tec-desativada')
+                })
+                verificaDescAtivada = false
+            } else {
+                let divTec = card.querySelector('.tecnologias')
+                let divContent = card.querySelector('.conteudo-site')
+                let cardDesc = divTec.querySelector('.descricao-tec')
+                cardDesc.classList.toggle('descricao-tecatv')
+                setTimeout(() => {
+                    divTec.classList.toggle('tecnologias-atv')
+                    divContent.classList.toggle('conteudo-site-dst')
+                }, 400)
+                let tecs = card.querySelectorAll('.tec')
+                tecs.forEach((tec) => {
+                    tec.classList.toggle('tec-desativada')
+                })
+                verificaDescAtivada = true
+            }
 
         } else {
             verificalink = true
