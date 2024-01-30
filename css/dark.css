@@ -829,7 +829,8 @@ strong.bootstrap{
     width: 100%;
     border-right: 4px solid var(--cor4);
     padding-bottom: 80px;
-    animation-play-state: paused;
+    opacity: 0;
+    transition: 1s all;
 }
 
 .conteiner-titulo-projetos{
@@ -1313,7 +1314,7 @@ strong.bootstrap{
 
 .text-box{
     padding: 20px 30px;
-    background-color: #fff;
+    background-color: #ffffff;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
@@ -1329,27 +1330,19 @@ strong.bootstrap{
 }
 
 .container-timeline svg{
-    width: 40px;
-    height: 40px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -25px;
+    border: 2px solid var(--cor5);
+    border-radius: 50%;
+    top: 32px;
     z-index: 10;
     background-color: var(--cor2);
 }
 
-.container-svg{
-    display: flex;
-    position: absolute;
-    top: 23px;
-    right: -30px;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    background-color: var(--cor2);
-    border: 2px solid var(--cor5);
-    border-radius: 50%;
-}
-
-.right-container .container-svg{
-    right: 492px;
+.right-container svg{
+    left: -25px;
 }
 
 

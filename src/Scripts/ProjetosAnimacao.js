@@ -16,6 +16,7 @@ const observerProjetos = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             animationTituloProjeto()
             setTimeout(() =>{
+                animationSectionProjeto()
                 animationCardsProjeto()
                 animacaoTecProjetos()
                 animacaoTextosProjetos()
@@ -67,7 +68,15 @@ function animationTituloProjeto(){
 }
 
 
-//AnimationTituloProjetos
+//animationSectionProjeto
+
+function animationSectionProjeto(){
+    const projeto = document.getElementById('projetos')
+    projeto.style.opacity = 1
+}
+
+//animationSectionProjeto
+
 
 //AnimationCardsProjetos
 
