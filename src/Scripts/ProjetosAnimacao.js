@@ -14,9 +14,12 @@ const optionsP = {
 const observerProjetos = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            animationTituloProjeto()
+            animationSectionProjeto()
+            setTimeout(()=> {
+                animationTituloProjeto()
+            }, 500)
             setTimeout(() =>{
-                animationSectionProjeto()
+                
                 animationCardsProjeto()
                 animacaoTecProjetos()
                 animacaoTextosProjetos()
