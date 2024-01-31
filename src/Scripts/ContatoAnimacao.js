@@ -4,23 +4,23 @@ const options = {
     threshold: 0.4,
 }
 
-const optionsS = {
+const optionsC = {
     root: null,
     threshold: 0.8,
 }
 
 
-
 //ObserverSkills
-const observerSkills = new IntersectionObserver((entries) => {
+const observerContato = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
     
-            observerSkills.unobserve(sectionSkills)
+            observerContato.unobserve(sectionContato)
         }
     })
 }, options)
-const observerSkillsOpt = new IntersectionObserver((entries) => {
+
+const observerContatoOpt = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
@@ -30,10 +30,10 @@ const observerSkillsOpt = new IntersectionObserver((entries) => {
             optsmarcadores[4].classList.remove('opt-ativada')
         }
     })
-}, optionsS)
+}, optionsC)
 
 
-const sectionSkills = document.getElementById('skills')
-observerSkills.observe(sectionSkills)
-observerSkillsOpt.observe(sectionSkills)
+const sectionContato = document.getElementById('contato')
+observerContato.observe(sectionContato)
+observerContatoOpt.observe(sectionContato)
 //ObserverSkills

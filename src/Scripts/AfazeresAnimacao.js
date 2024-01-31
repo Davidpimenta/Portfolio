@@ -22,7 +22,7 @@ const observerAfazeres = new IntersectionObserver((entries) => {
 
             setTimeout(() => {
                 timelineAnimacao()
-            }, 4200)
+            }, 3800)
             
 
             observerAfazeres.unobserve(sectionAfazeres)
@@ -73,7 +73,7 @@ function TituloAfazerAnimacao(){
         let span = document.createElement('span');
         span.textContent = letra; 
         span.classList.add('tituloLetra');
-        span.style.animationDelay = `${index * 0.1}s`; 
+        span.style.animationDelay = `${index * 0.09}s`; 
         tituloAfazer.appendChild(span);
         if(letra == 'a' || letra == 'o'){
             let espaco = document.createElement('span');
@@ -90,7 +90,7 @@ function TituloAfazerAnimacao(){
 function timelineAnimacao(){
     const timeline = document.querySelectorAll('.container-timeline')
     const trilha = document.querySelector('.trilha')
-    trilha.style.animation = 'moveline 6s linear forwards'
+    trilha.style.animation = 'moveline 4s linear forwards'
     for(let i = 0; i < timeline.length; i++){
         timeline[i].style.animation = `movedown 1s ${i + 1}s linear forwards`
     }
@@ -106,9 +106,9 @@ function tracoAnimacaoEnd(){
     const tracofinaldown =  document.querySelector('.tracofinaldown')
     const bolinhafinal =  document.querySelector('.bolinhafinal')
 
-    tracofinalleft.style.animation = 'movetracoleft 1s forwards'
-    tracofinaldown.style.animation = 'movetracodown 1s 1s forwards'
-    bolinhafinal.style.animation = 'animacaobolinha 1s 2s forwards'
+    tracofinalleft.style.animation = 'movetracoleft 0.8s forwards'
+    tracofinaldown.style.animation = 'movetracodown 0.8s 0.8s forwards'
+    bolinhafinal.style.animation = 'animacaobolinha 0.8s 1.5s forwards'
 }
 
 //tracoAnimacaoEnd
