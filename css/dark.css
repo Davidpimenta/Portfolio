@@ -30,7 +30,7 @@ p {
 .particles-all {
   position: absolute;
   top: 0%;
-  width: 100vw;
+  width: calc(100vw - 15px);
   height: 100vh;
   z-index: 29;
 }
@@ -38,9 +38,6 @@ p {
 body {
   background-color: var(--cor2);
   height: 100%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-
 }
 
 html {
@@ -827,6 +824,7 @@ strong.bootstrap {
 
 .cards {
   display: flex;
+  justify-content: center;
   width: 100%;
   padding-block: 20px;
   gap: 30px;
@@ -1449,9 +1447,10 @@ strong.bootstrap {
 /**Contato**/
 
 .traco-top-contato{
+    opacity: 0;
     background-color: var(--cor5);
     width: 6px;
-    height: 50px;
+    height: 0px;
     position: absolute;
     top: -80px;
     left: 50%;
@@ -1461,17 +1460,35 @@ strong.bootstrap {
 
 .bolinha-top-contato{
     position: absolute;
+    opacity: 0;
     left: 50%;
     top: -35px;
+    width: 0px;
+    height: 0px;
     transform: translate(-50%, 0%);
-    width: 25px;
-    height: 25px;
     border-radius: 50%;
     background-color: var(--cor4);
     border: 5px solid var(--cor5);
 }
+@keyframes tracoAnimacao {
+    100%{
+        opacity: 1;
+        height: 50px;
+    }
+}
+
+@keyframes BolinhaAnimacao {
+    100%{
+        opacity: 1;
+        width: 25px;
+        height: 25px;
+    }
+}
+
 #contato{
     width: 100%;
+    padding: 0px;
+    padding-bottom: 60px;
     position: relative;
 }
 
@@ -1479,32 +1496,36 @@ strong.bootstrap {
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .titulo-contato{
+    opacity: 0;
     background: linear-gradient(180deg, #0091ff, #0079d6);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .conteiner-all-contato{
-    max-width: 350px;
-    padding: 15px;
+    max-width: 950px;
+    padding: 5px;
     margin: 25px auto;
-    background-color: var(--cor5);
     border-radius: 15px;
-    box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.404);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.403);
+    opacity: 0;
+    transition: 1s all;
 }
 
 .card-contato{
     width: 100%;
     padding: 20px;
-    background-color: var(--cor2);
+    background-color: var(--cor3);
     border-radius: 10px;
-   
+    overflow: hidden;
 }
 
 .titulo-card-contato{
+    opacity: 0;
     max-width: 180px;
     margin: auto;
     display: flex;
@@ -1512,6 +1533,7 @@ strong.bootstrap {
     background-color: var(--cor4);
     padding: 10px;
     border-radius: 15px;
+    transform: translate(-300%, 0px);
 }
 
 
@@ -1521,25 +1543,36 @@ strong.bootstrap {
     font-weight: 600;
 }
 
-
+.container-contato-svg{
+    display: flex;
+    justify-content: center;
+}
 .container-contato-svg svg{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
+
 }
 
-
 .conteiner-redes-conteudo{
+    display: flex;
+    flex-direction: row;
     margin: 15px 0px;
     border-radius: 15px;
+    justify-content: center;
+    gap: 25px;
 }
 
 .redes-container{   
-    width: 90%;
-    margin-inline: auto;
-    margin-block: 20px;
-    gap: 15px;
+    opacity: 0;
+    width: 150px;
+    background-color: var(--cor5);
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: space-between;
+    transform: translate( 0%, 100px);
 }
 
 .container-nome-contato{
@@ -1553,15 +1586,22 @@ strong.bootstrap {
 }
 
 .container-btn{
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container-btn p {
+    color: black;
+    font-size: 15px;
 }
 
 .btn-contato{
-    width: 100px;
+    width: 100%;
     height: 30px;
     border-radius: 10px;
     border: 0px;
-    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.512);
     color: white;
     cursor: pointer;
     transition: 0.5s all;
@@ -1588,6 +1628,23 @@ strong.bootstrap {
     background-color: #6F6EF1;
 }
 
+.btn-zap{
+    background-color: #22974F;
+}
+
+.btn-localidade{
+    background-color: #E1032D;
+    
+}
+
+.btn-curriculo{
+    background-color: var(--cor4);
+}
+
+.btn-localidade a{
+    font-size: 13px;
+}
+
 .container-telefone{
     width:  100px;
     display: flex;
@@ -1601,8 +1658,53 @@ strong.bootstrap {
     text-wrap: nowrap;
 }
 
+
+@keyframes tituloCardAnimacao {
+    0%{
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes redesAnimacao {
+
+    100%{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
 /**Contato**/
+
+
 
 /**Sections**/
 
+
 /**Main**/
+
+
+/**Footer**/
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--cor4);
+}
+
+footer h4{
+    font-size: 18px;
+    color: var(--cor5);
+}
+
+footer h4 strong{
+    color: #F5D166;
+}
+
+
+/**Footer**/

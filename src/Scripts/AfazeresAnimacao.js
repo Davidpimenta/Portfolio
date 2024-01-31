@@ -23,7 +23,6 @@ const observerAfazeres = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 timelineAnimacao()
             }, 3800)
-            
 
             observerAfazeres.unobserve(sectionAfazeres)
         } 
