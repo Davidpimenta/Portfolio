@@ -30,7 +30,7 @@ p {
 .particles-all {
   position: absolute;
   top: 0%;
-  width: calc(100vw - 15px);
+  width: 100%;
   height: 100vh;
   z-index: 29;
 }
