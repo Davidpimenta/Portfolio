@@ -35,11 +35,12 @@ const observerProjetosOpt = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[2].classList.add('opt-ativada')
-        
+
 
         } else {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[2].classList.remove('opt-ativada')
+
         }
     })
 }, optionsP)

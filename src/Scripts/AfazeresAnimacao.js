@@ -35,10 +35,12 @@ const sectionAfazeresOpt = new IntersectionObserver((entries) => {
 
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[3].classList.add('opt-ativada')
+
         } else {
             
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[3].classList.remove('opt-ativada')
+
         }
     })
 }, optionsC)

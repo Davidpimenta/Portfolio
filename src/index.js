@@ -5,5 +5,6 @@ import * as animacaoEstudos from '/Src/Scripts/EstudosAnimacao.js'
 import * as animacaoProjetos from '/Src/Scripts/ProjetosAnimacao.js'
 import * as animacaoAfazeres from '/Src/Scripts/AfazeresAnimacao.js'
 import * as animacaoSkills from '/Src/Scripts/ContatoAnimacao.js'
+import * as animacaoMenu from '/Src/Scripts/menuAnimacao.js'
 
 

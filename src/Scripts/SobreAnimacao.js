@@ -34,9 +34,11 @@ const observerSobreOpt = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[0].classList.add('opt-ativada')            
+
         } else {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[0].classList.remove('opt-ativada')
+ 
         }
     })
 }, optionsSo)
@@ -47,7 +49,8 @@ observerSobreOpt.observe(sectionSobre)
 
 //Animação Foto sobre
 const fotoSobre = document.getElementById('foto')
-const bgfoto = document.querySelector('.conteiner-foto-sobre')
+const bgfoto = document.querySelector('.container-foto-sobre')
+
 function animaçãoFotoSobre(){
 
     bgfoto.style.animation = 'animaçãoFoto 1s 1s forwards'

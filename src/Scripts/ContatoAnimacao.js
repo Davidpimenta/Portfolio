@@ -44,6 +44,8 @@ const observerContatoOpt = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[4].classList.add('opt-ativada')
+
+        
         } else {
             const optsmarcadores = document.querySelectorAll('.opt-desativada')
             optsmarcadores[4].classList.remove('opt-ativada')
@@ -96,14 +98,14 @@ function TracoAnimacao(){
 
 //AnimacaoBolinhaeTraco
 
-//conteinerallcontato
+//containerallcontato
 
 function containerContato(){
-    const container = document.querySelector('.conteiner-all-contato')
+    const container = document.querySelector('.container-all-contato')
     container.style.opacity = 1
 }
 
-//conteinerallcontato
+//containerallcontato
 
 //titulo-card-contato
 
