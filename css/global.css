@@ -70,13 +70,13 @@ nav {
   background-color: var(--cor1);
   pointer-events: none;
   overflow: hidden;
-  transition: 1.5s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .menu-ul-act {
   height: 160px;
   pointer-events: all;
-  transition: 1.5s ease-out;
+  transition: 1s ease-out;
 }
 
 .opt {
@@ -565,13 +565,6 @@ main {
   justify-content: center;
 }
 
-.titulo-estudos {
-  background: linear-gradient(180deg, #0091ff, #0079d6);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-}
-
 .container-all-content {
   margin-top: 25px;
 }
@@ -593,8 +586,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   padding: 1px;
   box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.46);
   border-radius: 15px;
@@ -638,6 +631,7 @@ main {
   text-align: left;
   transition: 1s;
 }
+
 strong.html {
   color: #dd4b25;
 }
@@ -686,11 +680,6 @@ strong.bootstrap {
   --second-color: #008080;
   --size: 80px;
   --speed: 4s;
-}
-.skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .before {
@@ -793,5 +782,333 @@ strong.bootstrap {
 }
 
 /*Estudos*/
+
+/*Projetos*/
+
+#projetos {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+  opacity: 0;
+  transition: 1s all;
+  border-right: 0px;
+  overflow-x: hidden;
+}
+
+.container-titulo-projetos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container-conteudo-projetos {
+  width: 100%;
+  display: flex;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding-block: 20px;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 310px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.189);
+}
+
+.links {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  padding: 10px 20px;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.conteudo-site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+  transition: 1s all;
+}
+
+.conteudo-site-dst {
+  height: 20%;
+}
+
+.titulo-site {
+  position: absolute;
+  z-index: 10;
+  top: 95%;
+  transform: translate(0%, -95%);
+}
+
+.titulo-site h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--cor4);
+}
+
+.tecnologias {
+  position: relative;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  gap: 20px;
+  transition: 1s all;
+}
+
+.tecnologias-atv {
+  height: 80%;
+  z-index: 10;
+}
+
+.tec {
+  width: 25px;
+  opacity: 0;
+  transform: translate(-100%, 0%);
+  animation: nenhuma 1s forwards;
+}
+
+.js {
+  width: 28px;
+}
+
+.sass {
+  width: 35px;
+}
+
+.php {
+  width: 35px;
+}
+
+.bt {
+  width: 32px;
+}
+
+.bg-site {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.ft-site {
+  position: relative;
+  z-index: 9;
+  width: 50%;
+}
+
+.snap {
+  width: 75%;
+}
+
+.div-bg {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-link {
+  width: 35px;
+}
+
+.site-em-desenvolvimento {
+  font-size: 20px !important;
+}
+
+.container-texto-projetos {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.texto-projetos {
+  width: 75%;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  opacity: 0;
+  font-size: 25px;
+  align-self: center;
+}
+
+.texto-projetos .letraTextoProjeto {
+  color: darkgray;
+  display: inline-block;
+  transform: translate(0%, -100%);
+  opacity: 0;
+  animation: appearUp 0.5s forwards;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tec-desativada {
+  transition: 1s all;
+  animation: slide-out-left 5s forwards !important;
+}
+
+.descricao-tec {
+  position: absolute;
+  width: calc(100% - 30px);
+  top: 5%;
+  transform: translate(0%, 0%);
+  animation: slide-out-left 2s forwards;
+}
+
+.descricao-tecatv {
+  display: inline-block;
+  animation: slide-in-left 1s forwards;
+}
+
+.descricao-tec p {
+  text-wrap: balance;
+  color: white;
+  font-weight: 600;
+}
+
+@keyframes animaçãotec {
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+/*Projetos*/
 
 /*Main*/
