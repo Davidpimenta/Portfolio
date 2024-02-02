@@ -161,6 +161,7 @@
 
   main {
     width: 85%;
+    padding-top: 70px;
   }
 
   #container-content {
@@ -263,7 +264,6 @@
 
   #sobre {
     width: 100%;
-    opacity: 0;
   }
 
   @keyframes CarregamentoSection {
@@ -1238,7 +1238,6 @@
     padding-top: 0px;
     position: relative;
     border-right: 4px solid #0079d6;
-    animation-play-state: paused;
   }
 
   #sobre::before {
