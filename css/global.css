@@ -1124,18 +1124,19 @@ strong.bootstrap {
 .tracofinaldown {
   display: inline-block;
   position: absolute;
+  margin-left: -3px;
   width: 0px;
   height: 5px;
-  right: 90px;
+  right: 0%;
   top: 60px;
 }
 
 .bolinhafinal {
   display: inline-block;
   position: absolute;
-  right: 60px;
+  right: 0px;
   top: 63px;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -1151,7 +1152,7 @@ strong.bootstrap {
 
 @keyframes movetracodown {
   100% {
-    width: calc(50% + 43px);
+    width: calc(100% - 31px);
     opacity: 1;
   }
 }
@@ -1159,6 +1160,7 @@ strong.bootstrap {
 @keyframes movetracoleft {
   100% {
     height: 80px;
+    z-index: -2;
     opacity: 1;
   }
 }
@@ -1523,3 +1525,22 @@ strong.bootstrap {
 
 /**Contato**/
 /*Main*/
+
+/*Footer*/
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+footer h4 {
+  font-size: 15px;
+}
+
+footer h4 strong {
+  color: #f5d166;
+}
+
+/*Footer*/
