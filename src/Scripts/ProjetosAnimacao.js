@@ -7,7 +7,7 @@ const options = {
 
 const optionsP = {
     root: null,
-    threshold: 0.6,
+    threshold: 0.4,
 }
 
 
