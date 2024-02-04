@@ -1453,21 +1453,22 @@ strong.bootstrap {
 }
 
 .btn-contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 30px;
   border-radius: 10px;
   border: 0px;
-  color: white;
   cursor: pointer;
+  text-decoration: none;
   transition: 0.5s all;
 }
 
-.btn-contato a {
+.btn-contato p {
   font-size: 15px;
   font-weight: 600;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: white!important;
 }
 
 .btn-contato:hover {
