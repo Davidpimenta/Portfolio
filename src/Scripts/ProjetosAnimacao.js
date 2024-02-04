@@ -7,7 +7,7 @@ const options = {
 
 const optionsP = {
     root: null,
-    threshold: 0.4,
+    threshold: observerResponsivo(),
 }
 
 
@@ -214,3 +214,19 @@ cards.forEach((card) => {
 })
 
 //AnimationDescProjeto
+
+
+//ObserverResponsivo
+
+function observerResponsivo(){
+    if(window.innerHeight <= 380){
+        return 1
+    } else {
+        return 0.5
+    }
+}
+
+console.log(optionsP)
+
+
+//ObserverResponsivo

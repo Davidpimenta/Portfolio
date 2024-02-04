@@ -6,7 +6,7 @@ const options = {
 
 const optionsC = {
     root: null,
-    threshold: 0.8,
+    threshold: observerResponsivo(),
 }
 
 
@@ -128,3 +128,12 @@ function redesAnimacao(){
 }
 
 //Redesanimacao
+
+
+function observerResponsivo(){
+    if(window.innerHeight <= 380){
+        return 1
+    } else {
+        return 0.8
+    }
+}
