@@ -218,10 +218,12 @@ main {
   position: absolute;
   top: 90%;
   transform: translate(0%, -90%);
+  z-index: 30;
 }
 
 .content-arrow > i {
   font-size: 50px;
+  cursor: pointer;
   animation: arrow 0.3s steps(60) 1;
 }
 
@@ -1468,7 +1470,7 @@ strong.bootstrap {
 .btn-contato p {
   font-size: 15px;
   font-weight: 600;
-  color: white!important;
+  color: white !important;
 }
 
 .btn-contato:hover {
